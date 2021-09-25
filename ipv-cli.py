@@ -42,8 +42,8 @@ def delete_and_renew_config():
         zip_ref.extractall(path)
 
 
-        
-        def get_host_and_ping(conf_file):
+# returns array [host, avg ping to host]
+def get_host_and_ping(conf_file):
     with open(path + conf_file) as file:
         for i, line in enumerate(file):
             if i == 3:
